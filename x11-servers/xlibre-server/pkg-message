@@ -1,7 +1,7 @@
 [
 { type: install
   message: <<EOM
-Xorg-server has been installed.
+XLibre-server has been installed.
 
 If your kernel is compiled with the EVDEV_SUPPORT option enabled
 (default starting from FreeBSD 12.1) it is recommended to enable evdev mode in
@@ -9,7 +9,7 @@ pointer device drivers like ums(4) and psm(4). This will give improvements like
 better tilt wheel support for mice and centralized gesture support via
 xf86-input-synaptics or libinput drivers for touchpads.
 
-This is also needed for PS/2 devices to be properly detected by Xorg when
+This is also needed for PS/2 devices to be properly detected by XLibre when
 moused service is disabled in /etc/rc.conf and kernel is compiled with
 EVDEV_SUPPORT.
 
