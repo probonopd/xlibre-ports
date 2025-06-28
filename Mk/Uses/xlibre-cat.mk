@@ -1,7 +1,7 @@
-# xlibre ports categories and other things needed to build xlibre ports.
-# This is intended only for ports of xlibre and freedesktop.org applications.
+# XLibre ports categories and other things needed to build XLibre ports.
+# This is intended only for ports of XLibre and related applications.
 #
-# Use USES=xlibre and USE_XLIBRE to depend on various xlibre components.
+# Use USES=xlibre and USE_XLIBRE to depend on various XLibre components.
 #
 # Feature:	xlibre-cat
 # Usage:	USES=xlibre-cat:category[,buildsystem]
@@ -26,10 +26,8 @@
 # 		* meson (experimental)
 #
 #
-# By defining USE_GITLAB and GL_TAGNAME, it is possible to pull code straight
-# from the freedesktop.org gitlab, instead of official release tarballs.
 #
-#.MAINTAINER:	x11@FreeBSD.org
+#.MAINTAINER:	b-aazbsd.proton.me
 
 .if !defined(_INCLUDE_USES_XLIBRE_CAT_MK)
 _INCLUDE_USES_XLIBRE_CAT_MK=yes
@@ -38,7 +36,7 @@ _XLIBRE_CATEGORIES=	app data doc driver font lib proto util
 _XLIBRE_BUILDSYSTEMS=	autotools meson
 
 _XLIBRE_CAT=		# empty
-_XLIBRE_BUILDSYS=		# empty
+_XLIBRE_BUILDSYS=	# empty
 
 .  if empty(xlibre-cat_ARGS)
 IGNORE=		no arguments specified to xlibre-cat
@@ -83,23 +81,17 @@ GNU_CONFIGURE=		yes
 IGNORE=		unknown build system specified via xlibre-cat:${xlibre-cat_ARGS:ts,}
 .  endif
 
-.  if defined(USE_GITLAB)
-# Set up things for fetching from freedesktop.org gitlab.
-# This can be overridden using normal GL_* macros in the ports Makefile.
-# We make a best guess for GL_ACCOUNT and GL_PROJECT.
-GL_SITE?=		https://gitlab.freedesktop.org/xorg
-GL_ACCOUNT?=		${_XLIBRE_CAT}
-GL_PROJECT?=		${PORTNAME:tl}
+# Set up things for fetching from X11Libre GitHub.
+# This can be overridden using normal GH_* macros in the ports Makefile.
+# We make a best guess for GH_PROJECT.
+GH_ACCOUNT?=		X11Libre
+GH_PROJECT?=		${PORTNAME:tl}
 .    if ${_XLIBRE_BUILDSYS} == meson
 # set up meson stuff here
 .    else
-# Things from GL doesn't come with pre-generated configure, add dependency on
+# Things from GitHub doesn't come with pre-generated configure, add dependency on
 # autoreconf and run it, if we're using autotools.
 .include "${USESDIR}/autoreconf.mk"
-.    endif
-.  else
-MASTER_SITES?=		XORG/individual/${_XLIBRE_CAT}
-.  endif
 
 #
 ## All xlibre ports needs pkgconfig to build, but some ports look for pkgconfig
