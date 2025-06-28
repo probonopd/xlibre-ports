@@ -1,3 +1,3 @@
-TIMESTAMP = 1740764814
-SHA256 (xorg-server-21.1.16.tar.xz) = b14a116d2d805debc5b5b2aac505a279e69b217dae2fae2dfcb62400471a9970
-SIZE (xorg-server-21.1.16.tar.xz) = 5025304
+TIMESTAMP = 1751040359
+SHA256 (x11libre-xserver-25.0.0.1-3e1c2d5_GH0.tar.gz) = 6c1806fdc92d384b508533120785280e3c71b44d71dc9db153ee0fd3c941a9c5
+SIZE (x11libre-xserver-25.0.0.1-3e1c2d5_GH0.tar.gz) = 5402348

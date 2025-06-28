@@ -1,13 +1,15 @@
-PORTNAME=	xorg
-PORTVERSION=	21.1.16
-PORTEPOCH=	1
+PORTNAME=	xlibre
+PORTVERSION=	25.0.0.1
 CATEGORIES=	x11-servers
-MASTER_SITES=	XORG/individual/xserver
-DISTNAME=	xorg-server-${PORTVERSION}
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org X server and related programs
-WWW=		https://www.freedesktop.org/Software/xorg
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	Xlibre X server and related programs
+WWW=		https://github.com/xlibre/xserver
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	x11libre
+GH_PROJECT=	xserver
+GH_TAGNAME=	3e1c2d5
 
 LICENSE=	MIT
 
@@ -16,6 +18,7 @@ FLAVOR?=	${FLAVORS:[1]}
 
 USES=		compiler:c11 cpe gl meson pkgconfig tar:xz xorg
 USE_GL=		gl
+# TODO: XLibre seams to depend on libepoll-shim, it should be added here.
 
 .if ${FLAVOR} == xephyr
 PORTNAME=	xephyr
