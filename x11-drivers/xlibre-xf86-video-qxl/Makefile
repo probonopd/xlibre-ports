@@ -3,9 +3,9 @@ DISTVERSION=	0.1.6
 PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	hrs@FreeBSD.org
-COMMENT=	X.Org X server -- QXL display driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre X server -- QXL display driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT
 
@@ -14,8 +14,9 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 LIB_DEPENDS=	libspice-server.so:devel/libspice-server \
 		libudev.so:devel/libudev-devd
 
+GH_TAGNAME=	39130a4
 USES=		localbase:ldflags pkgconfig python shebangfix tar:xz xorg \
-		xorg-cat:driver
+		xlibre-cat:driver
 USE_XORG=	xfont2
 
 python_OLD_CMD=	/usr/bin/python
