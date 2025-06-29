@@ -3,14 +3,15 @@ PORTVERSION=	1.6.3
 PORTREVISION=	5
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org joystick input driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre joystick input driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pathfix xorg-cat:driver
+GH_TAGNAME=	f6e29f8
+USES=		pathfix xlibre-cat:driver
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
