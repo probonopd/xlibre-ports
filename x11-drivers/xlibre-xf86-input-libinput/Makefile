@@ -3,9 +3,9 @@ PORTVERSION=	1.3.0
 PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org libinput input driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre libinput input driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT # various styles
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	libinput.so:x11/libinput
 
-USES=		pathfix tar:xz xorg-cat:driver
+GH_TAGNAME=	9c64c02
+USES=		pathfix tar:xz xlibre-cat:driver
 
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
