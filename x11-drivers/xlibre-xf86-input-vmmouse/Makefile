@@ -3,11 +3,12 @@ PORTVERSION=	13.1.0
 PORTREVISION=	7
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org vmmouse input driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre vmmouse input driver
+WWW=		https://github.com/X11Libre/
 
-USES=		gmake xorg-cat:driver
+GH_TAGNAME=	f27f2b1
+USES=		gmake xlibre-cat:driver
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
