@@ -3,11 +3,12 @@ PORTVERSION=	1.4.1
 PORTREVISION=	6
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org void input driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre void input driver
+WWW=		https://github.com/X11Libre/
 
-USES=		xorg-cat:driver
+GH_TAGNAME=	b43e11e
+USES=		xlibre-cat:driver
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
