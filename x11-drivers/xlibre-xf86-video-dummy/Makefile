@@ -3,13 +3,14 @@ PORTVERSION=	0.3.8
 PORTREVISION=	4
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org dummy display driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre dummy display driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		xorg-cat:driver
+GH_TAGNAME=	3a407a3
+USES=		xlibre-cat:driver
 
 .include <bsd.port.mk>
