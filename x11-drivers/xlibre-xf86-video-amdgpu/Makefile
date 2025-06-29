@@ -8,9 +8,9 @@ CATEGORIES=	x11-drivers
 PATCH_SITES=	https://gitlab.freedesktop.org/xorg/driver/${PORTNAME}/-/commit/
 PATCHFILES+=	77b13493.patch:-p1 # https://gitlab.freedesktop.org/xorg/driver/xf86-video-amdgpu/-/merge_requests/77
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org amdgpu display driver
-WWW=		https://www.x.org/wiki/RadeonFeature/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre amdgpu display driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,7 +21,8 @@ ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86/arm64
 
 LIB_DEPENDS=	libdrm_amdgpu.so:graphics/libdrm
 
-USES=		gl tar:xz xorg-cat:driver
+GH_TAGNAME=	353b372
+USES=		gl tar:xz xlibre-cat:driver
 USE_GL=		gbm
 
 CONFIGURE_ARGS+=--disable-udev
