@@ -4,11 +4,12 @@ PORTREVISION=	5
 PORTEPOCH=	3
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org mga display driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre mga display driver
+WWW=		https://github.com/X11Libre/
 
-USES=		gl xorg-cat:driver
+GH_TAGNAME=	3f2000a
+USES=		gl xlibre-cat:driver
 USE_GL=		gl
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
