@@ -1,10 +1,10 @@
 # Originally from bsd.xorg.mk
 #
-# Feature:		xorg
-# Usage:		USES=xorg
-# 			USE_XORG=<component>
+# Feature:		xlibre
+# Usage:		USES=xlibre
+# 			USE_XLIBRE=<component>
 #
-# 			Not specifying USE_XORG with USES=xorg is an error.
+# 			Not specifying USE_XLIBRE with USES=xlibre is an error.
 #			
 #			Components can be found in the XORG_MODULES list below.
 #
@@ -13,26 +13,26 @@
 #
 # MAINTAINER:	x11@FreeBSD.org
 
-.if !defined(_INCLUDE_USES_XORG_MK)
-_INCLUDE_USES_XORG_MK=		yes
-_USES_POST+=	xorg
+.if !defined(_INCLUDE_USES_XLIBRE_MK)
+_INCLUDE_USES_XLIBRE_MK=		yes
+_USES_POST+=	xlibre
 .endif
 
 # Set up things after bsd.port.post.mk.
-# This way ports can add things to USE_XORG even after bsd.port.pre.mk is
+# This way ports can add things to USE_XLIBRE even after bsd.port.pre.mk is
 # included.
-.if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_XORG_POST_MK)
-_INCLUDE_USES_XORG_POST_MK=	yes
+.if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_XLIBRE_POST_MK)
+_INCLUDE_USES_XLIBRE_POST_MK=	yes
 
-.  if !empty(xorg_ARGS)
-IGNORE=		USES=xorg takes no arguments
+.  if !empty(xlibre_ARGS)
+IGNORE=		USES=xlibre takes no arguments
 .  endif
 
-.  if !defined(USE_XORG)
-IGNORE=		need to specify xorg modules with USE_XORG
+.  if !defined(USE_XLIBRE)
+IGNORE=		need to specify xlibre modules with USE_XLIBRE
 .  endif
 
-# List of xorg modules
+# List of xlibre modules
 XORG_MODULES=	fontenc \
 		fontutil \
 		ice \
@@ -62,7 +62,7 @@ XORG_MODULES=	fontenc \
 		xmu \
 		xmuu \
 		xorg-macros \
-		xorg-server \
+		xlibre-server \
 		xorgproto \
 		xpm \
 		xpresent \
@@ -134,16 +134,16 @@ xxf86vm_LIB_PC_DEPENDS=		${LOCALBASE}/libdata/pkgconfig/xxf86vm.pc:x11/libXxf86v
 CONFIGURE_ARGS+=--x-libraries=${LOCALBASE}/lib --x-includes=${LOCALBASE}/include
 .  endif
 
-.  for _module in ${USE_XORG:M*\:both:C/\:.*//g}
+.  for _module in ${USE_XLIBRE:M*\:both:C/\:.*//g}
 .    if ${XORG_MODULES:M${_module}} == ""
-IGNORE=		requires unknown xorg module (${_module})
+IGNORE=		requires unknown xlibre module (${_module})
 .    endif
 RUN_DEPENDS+=	${${_module}_BUILD_DEPENDS}
 .  endfor
 
-.  for _module in ${USE_XORG:C/\:both$//g}
+.  for _module in ${USE_XLIBRE:C/\:both$//g}
 .    if ${XORG_MODULES:M${_module}} == ""
-IGNORE=		requires unknown xorg module (${_module})
+IGNORE=		requires unknown xlibre module (${_module})
 .    endif
 LIB_PC_DEPENDS+=${${_module}_LIB_PC_DEPENDS}
 BUILD_DEPENDS+=	${${_module}_BUILD_DEPENDS}
