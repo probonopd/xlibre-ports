@@ -1,3 +1,3 @@
-TIMESTAMP = 1484349230
-SHA256 (xorg/driver/xf86-input-keyboard-1.9.0.tar.bz2) = f7c900f21752683402992b288d5a2826de7a6c0c0abac2aadd7e8a409e170388
-SIZE (xorg/driver/xf86-input-keyboard-1.9.0.tar.bz2) = 341693
+TIMESTAMP = 1751182555
+SHA256 (xlibre/driver/X11Libre-xf86-input-keyboard-1.9.0-08eb4fd_GH0.tar.gz) = 0a8c5bc130f46f791dd8feae8c44a08ba7785330deab456ed5b63fb4c2ac878f
+SIZE (xlibre/driver/X11Libre-xf86-input-keyboard-1.9.0-08eb4fd_GH0.tar.gz) = 39131
