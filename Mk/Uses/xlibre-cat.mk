@@ -70,7 +70,7 @@ _XLIBRE_BUILDSYS=		autotools
 EXTRACT_SUFX?=		.tar.bz2
 .  endif
 
-DIST_SUBDIR=	xorg/${_XLIBRE_CAT}
+DIST_SUBDIR=	xlibre/${_XLIBRE_CAT}
 
 .  if ${_XLIBRE_BUILDSYS} == meson
 .include "${USESDIR}/meson.mk"
@@ -84,14 +84,19 @@ IGNORE=		unknown build system specified via xlibre-cat:${xlibre-cat_ARGS:ts,}
 # Set up things for fetching from X11Libre GitHub.
 # This can be overridden using normal GH_* macros in the ports Makefile.
 # We make a best guess for GH_PROJECT.
+USE_GITHUB=		yes
 GH_ACCOUNT?=		X11Libre
 GH_PROJECT?=		${PORTNAME:tl}
-.    if ${_XLIBRE_BUILDSYS} == meson
+.  if empty(GH_TAGNAME)
+IGNORE= GH_TAGNAME is empty, add a tagname!
+.  endif
+.  if ${_XLIBRE_BUILDSYS} == meson
 # set up meson stuff here
-.    else
+.  else
 # Things from GitHub doesn't come with pre-generated configure, add dependency on
 # autoreconf and run it, if we're using autotools.
 .include "${USESDIR}/autoreconf.mk"
+.  endif
 
 #
 ## All xlibre ports needs pkgconfig to build, but some ports look for pkgconfig
@@ -160,7 +165,9 @@ CONFIGURE_ARGS+=--enable-malloc0returnsnull
 # message about USES=xlibre not being set
 .  if defined(USE_XLIBRE) && !empty(USE_XLIBRE)
 USES+=		xlibre
-.include "${USESDIR}/xlibre.mk"
+# This line needs to change to ${USESDIR}/xlibre.mk if this file ends up in the
+# main ports tree
+.include "./xlibre.mk"
 .  endif
 
 .endif
