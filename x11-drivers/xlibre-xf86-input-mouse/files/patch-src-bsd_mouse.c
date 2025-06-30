@@ -148,12 +148,12 @@
              }
          }
      }
-@@ -232,41 +299,41 @@ SetSysMouseRes(InputInfoPtr pInfo, const char *protoco
+@@ -235,41 +302,41 @@
          (protocol && xf86NameCmp(protocol, "SysMouse") == 0)) {
          /*
           * As the FreeBSD sysmouse driver defaults to protocol level 0
--         * everytime it is opened we enforce protocol level 1 again at
-+         * everytime it is closed we enforce protocol level 1 again at
+-         * every time it is opened we enforce protocol level 1 again at
++         * every time it is closed we enforce protocol level 1 again at
           * this point.
           */
          mode.level = 1;
@@ -698,7 +698,7 @@
  
      pUsbMse = malloc(sizeof(UsbMseRec));
      if (pUsbMse == NULL) {
-@@ -651,13 +939,8 @@ usbPreInit(InputInfoPtr pInfo, const char *protocol, i
+@@ -654,13 +942,8 @@
          return FALSE;
      }
  
@@ -707,7 +707,7 @@
 +    bzero(pUsbMse, sizeof(UsbMseRec));
  
 -    /* Collect the options, and process the common options. */
--    COLLECT_INPUT_OPTIONS(pInfo, NULL);
+-    xf86CollectInputOptions(pInfo, NULL);
 -    xf86ProcessCommonOptions(pInfo, pInfo->options);
 -
      /* Check if the device can be opened. */
@@ -928,7 +928,7 @@
 +    xf86Msg(X_CONFIG, "%s: Protocol: %s\n", pInfo->name, protocol);
 +
 +    /* Collect the options, and process the common options. */
-+    COLLECT_INPUT_OPTIONS(pInfo, NULL);
++    xf86CollectInputOptions(pInfo, NULL);
 +    xf86ProcessCommonOptions(pInfo, pInfo->options);
 +
 +    /* Check if this HID device is already opened. */
