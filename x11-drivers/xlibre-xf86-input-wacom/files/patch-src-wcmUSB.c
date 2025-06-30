@@ -1,24 +1,21 @@
 --- src/wcmUSB.c.orig	2018-03-12 16:31:49 UTC
 +++ src/wcmUSB.c
-@@ -23,10 +23,17 @@
+@@ -27,8 +27,14 @@
  
- #include "xf86Wacom.h"
- 
+ #include <math.h>
 +#ifdef __linux__
  #include <asm/types.h>
-+#endif
- #include <linux/input.h>
- #include <sys/utsname.h>
-+#ifdef __linux__
- #include <linux/version.h>
++/* Not sure if these 2 lines are necessary: */
 +#else
 +#define LINUX_VERSION_CODE 1
 +#define KERNEL_VERSION(a,b,c) 0
 +#endif
+ #include <linux/input.h>
+ #include <sys/utsname.h>
  
- #define MAX_USB_EVENTS 32
+ #define MAX_USB_EVENTS 128
  
-@@ -280,6 +287,11 @@ static struct WacomModelDesc
+@@ -304,6 +304,11 @@ static struct WacomModelDesc
  	{ WACOM_VENDOR_ID, 0x314,200000, 200000, &usbIntuosPro,  "Intuos Pro S"		},
  	{ WACOM_VENDOR_ID, 0x315,200000, 200000, &usbIntuosPro,  "Intuos Pro M"		},
  	{ WACOM_VENDOR_ID, 0x317,200000, 200000, &usbIntuosPro,  "Intuos Pro L"		},
