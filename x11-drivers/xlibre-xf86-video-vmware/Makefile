@@ -3,9 +3,9 @@ PORTVERSION=	13.3.0
 PORTREVISION=	9
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org vmware display driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre vmware display driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	vmware gfx protocol is only supported on x86-compatible architectures
 
-USES=		xorg-cat:driver
+GH_TAGNAME=	90c79a5
+USES=		xlibre-cat:driver
 
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
 		libxatracker.so:graphics/mesa-gallium-xa
