@@ -3,9 +3,9 @@ PORTVERSION=	2.10.6
 PORTREVISION=	8
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org event device input driver
-WWW=		https://www.x.org/
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre event device input driver
+WWW=		https://github.com/X11Libre/
 
 LICENSE=	MIT # various styles
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -15,7 +15,8 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libmtdev.so:devel/libmtdev
 RUN_DEPENDS=	webcamd>=3.1.0.1:multimedia/webcamd
 
-USES=		pathfix xorg-cat:driver
+GH_TAGNAME=	0b5b97b
+USES=		pathfix xlibre-cat:driver
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ENV=	UDEV_CFLAGS=" " UDEV_LIBS=" "
 
