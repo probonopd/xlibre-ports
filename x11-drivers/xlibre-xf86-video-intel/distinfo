@@ -1,3 +1,3 @@
-TIMESTAMP = 1675274878
-SHA256 (xorg/driver/driver-xf86-video-intel-b74b67f0f321875492968f7097b9d6e82a66d7df_GL0.tar.gz) = 05f1953e6ad4b175b2695af2acab99fe954bb3ca7eabc6ada9f662ce1b76a8d3
-SIZE (xorg/driver/driver-xf86-video-intel-b74b67f0f321875492968f7097b9d6e82a66d7df_GL0.tar.gz) = 1696296
+TIMESTAMP = 1751186142
+SHA256 (xlibre/driver/X11Libre-xf86-video-intel-2.99.917-923-g-5245636_GH0.tar.gz) = 5d69c8ffe3224c50a1335e35a9babc0f268121dd367345da77448de22895c289
+SIZE (xlibre/driver/X11Libre-xf86-video-intel-2.99.917-923-g-5245636_GH0.tar.gz) = 1700550

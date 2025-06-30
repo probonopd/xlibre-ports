@@ -5,8 +5,8 @@ DISTVERSIONSUFFIX=	-g${GL_TAGNAME:C/(.{12}).*/\1/}
 PORTEPOCH=	1
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org legacy driver for Intel integrated graphics chipsets
+MAINTAINER=	b-aazbsd@proton.me
+COMMENT=	XLibre legacy driver for Intel integrated graphics chipsets
 WWW=		https://01.org/linuxgraphics/
 
 LICENSE=	MIT	# various
@@ -17,10 +17,9 @@ ONLY_FOR_ARCHS_REASON=	only Intel integrated GPUs on x86 are supported
 
 LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm
 
-USES=		cpe localbase xorg xorg-cat:driver
+USES=		cpe localbase xlibre xlibre-cat:driver
 CPE_VENDOR=	x
-USE_GITLAB=	yes
-GL_TAGNAME=	b74b67f0f321875492968f7097b9d6e82a66d7df
+GH_TAGNAME=	5245636
 USE_XORG=	pciaccess pixman
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ENV=	ac_cv_header_sys_sysinfo_h=no # XXX ports/242236
