@@ -5,7 +5,7 @@ task:
       memory: 16G
       matrix:
         # image: freebsd-13-1-release-amd64
-        - image: freebsd-14.1-release-amd64
+        - image: freebsd-14.0-release-amd64
 
     env:
       CIRRUS_CLONE_DEPTH: 1
