@@ -4,8 +4,8 @@ task:
       cpu: 4
       memory: 16G
       matrix:
-        - image: freebsd-13-1-release-amd64
-        # image: freebsd-14-0-current-amd64-v20220701
+        # image: freebsd-13-1-release-amd64
+        - image: freebsd-14.2-release-amd64
 
     env:
       CIRRUS_CLONE_DEPTH: 1
@@ -18,7 +18,8 @@ task:
       CCACHE_NOSTATS: 1
       CCACHE_TEMPDIR: "/tmp"
       WITH_CCACHE_BUILD: "YES"
-      PORTS_BRANCH: "2023Q1"
+      # PORTS_BRANCH: "2023Q1"
+      PORTS_BRANCH: "2025Q2"
     portstree_cache:
       folder: /usr/ports/
     ccache_cache:
