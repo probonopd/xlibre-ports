@@ -9,7 +9,7 @@ task:
 
     env:
       CIRRUS_CLONE_DEPTH: 1
-      GITHUB_TOKEN: ENCRYPTED[0ba3b24834d4b97a22e13d65dd9ef0de718c7129a9b7305fa0ddaa26af432f426156f8cf1f1575665a58192828b7ab24]
+      GITHUB_TOKEN: ENCRYPTED[4835b73bc800439a58999faa57d56ee2c150b7c1fffe6a4bbb484120cf6a9cd4bf3a2a8cf0b772a6ee2ec8d91c3afc14]
       BATCH: 1
       CCACHE_DIR: "/tmp/.ccache"
       CCACHE_COMPRESS: 1
@@ -40,7 +40,7 @@ task:
       - echo "WITH_CCACHE_BUILD=yes" >> /etc/make.conf
 
     build_script:
-      - ./build.sh
+      - sh -ex ./build.sh
       
     binary_artifacts:
       path: "FreeBSD:**/*"
