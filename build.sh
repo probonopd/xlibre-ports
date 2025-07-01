@@ -14,7 +14,7 @@ HERE="${PWD}"
 cd /usr/ports
 
 build_package x11-servers/xlibre-server
-build_package x11-drivers/xlibre-drivers
+# build_package x11-drivers/xlibre-drivers
 
 cd "${HERE}"
 umount /usr/ports
