@@ -13,8 +13,8 @@ mount -t unionfs $(readlink -f .) /usr/ports
 HERE="${PWD}"
 cd /usr/ports
 
-# wine-alsa
 build_package x11-servers/xlibre-server
+build_package x11-drivers/xlibre-drivers
 
 cd "${HERE}"
 umount /usr/ports
