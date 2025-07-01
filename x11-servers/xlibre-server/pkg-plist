@@ -168,3 +168,6 @@ share/man/man5/xorg.conf.5.gz
 share/man/man5/xorg.conf.d.5.gz
 @dir %%FONTPATHD%%
 @dir etc/X11/xorg.conf.d
+@dir lib/xorg/modules/drivers
+@dir lib/xorg/modules/input
+@dir lib/xorg/modules/extensions
