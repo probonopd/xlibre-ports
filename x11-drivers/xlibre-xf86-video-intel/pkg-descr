@@ -1,5 +1,5 @@
 The xf86-video-intel module is an open-source 2D graphics driver for
-the X Window System as implemented by X.org. It supports a variety of
+the X Window System as implemented by XLibre. It supports a variety of
 Intel graphics chipsets including:
 
         i810/i810e/i810-dc100,i815,

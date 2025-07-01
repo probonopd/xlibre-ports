@@ -1,4 +1,4 @@
-This package contains the X.Org xf86-video-amdgpu driver.
+This package contains the XLibre xf86-video-amdgpu driver.
 
 The amdgpu driver supports AMD Radeon chipsets: OLAND, HAINAN, TAHITI, PITCAIRN,
 VERDE, BONAIRE, KABINI, MULLINS, KAVERI, HAWAII, TOPAZ, TONGA, CARRIZO, FIJI,
