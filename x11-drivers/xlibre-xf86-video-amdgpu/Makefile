@@ -1,6 +1,6 @@
 # this port is for future amdgpu kernel support testing.
 
-PORTNAME=	xf86-video-amdgpu
+PORTNAME=	xlibre-xf86-video-amdgpu
 DISTVERSION=	22.0.0
 PORTREVISION=	2
 CATEGORIES=	x11-drivers

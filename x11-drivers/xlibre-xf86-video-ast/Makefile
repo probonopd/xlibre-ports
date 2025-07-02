@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-ast
+PORTNAME=	xlibre-xf86-video-ast
 PORTVERSION=	1.1.5
 PORTREVISION=	6
 CATEGORIES=	x11-drivers

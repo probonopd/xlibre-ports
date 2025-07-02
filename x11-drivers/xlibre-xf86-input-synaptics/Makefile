@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-synaptics
+PORTNAME=	xlibre-xf86-input-synaptics
 PORTVERSION=	1.9.1
 PORTREVISION=	11
 CATEGORIES=	x11-drivers

@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-ati
+PORTNAME=	xlibre-xf86-video-ati
 PORTVERSION=	19.1.0
 PORTREVISION=	7
 CATEGORIES=	x11-drivers

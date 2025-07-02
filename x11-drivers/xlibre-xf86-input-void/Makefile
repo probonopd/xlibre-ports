@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-void
+PORTNAME=	xlibre-xf86-input-void
 PORTVERSION=	1.4.1
 PORTREVISION=	6
 CATEGORIES=	x11-drivers

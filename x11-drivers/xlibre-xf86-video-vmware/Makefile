@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-vmware
+PORTNAME=	xlibre-xf86-video-vmware
 PORTVERSION=	13.3.0
 PORTREVISION=	9
 CATEGORIES=	x11-drivers

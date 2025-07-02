@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-libinput
+PORTNAME=	xlibre-xf86-input-libinput
 PORTVERSION=	1.3.0
 PORTREVISION=	1
 CATEGORIES=	x11-drivers
