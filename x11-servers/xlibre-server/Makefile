@@ -6,15 +6,15 @@ MAINTAINER=	b-aazbsd@proton.me
 COMMENT=	Xlibre X server and related programs
 WWW=		https://github.com/xlibre/xserver
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	x11libre
-GH_PROJECT=	xserver
-GH_TAGNAME=	3e1c2d5
-
 LICENSE=	MIT
 
 FLAVORS=	xorg xnest xephyr xvfb
 FLAVOR?=	${FLAVORS:[1]}
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	x11libre
+GH_PROJECT=	xserver
+GH_TAGNAME=	3e1c2d5
 
 USES=		compiler:c11 cpe gl meson pkgconfig tar:xz xorg
 USE_GL=		gl
@@ -117,8 +117,12 @@ LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
 
 .if ${FLAVOR} == xorg
+MODULESDIR=	/lib/xorg/modules
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/X11/xorg.conf.d
+	@${MKDIR} ${STAGEDIR}${PREFIX}${MODULESDIR}/extensions
+	@${MKDIR} ${STAGEDIR}${PREFIX}${MODULESDIR}/drivers
+	@${MKDIR} ${STAGEDIR}${PREFIX}${MODULESDIR}/input
 	@${MKDIR} ${STAGEDIR}${FONTPATHD}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d
 	@${INSTALL_DATA} ${FILESDIR}/20-evdev-kbd.conf \
