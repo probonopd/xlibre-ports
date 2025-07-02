@@ -14,8 +14,6 @@ HERE="${PWD}"
 cd /usr/ports
 
 build_package x11-servers/xlibre-server
-
-pkg install xorg-server # FIXME: Remove the need for this; currently the next steps fails without this
 build_package x11-drivers/xlibre-drivers
 
 cd "${HERE}"
