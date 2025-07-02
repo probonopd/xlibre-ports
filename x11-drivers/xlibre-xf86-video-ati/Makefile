@@ -1,7 +1,6 @@
 PORTNAME=	xf86-video-ati
 PORTVERSION=	19.1.0
 PORTREVISION=	7
-PORTEPOCH=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me

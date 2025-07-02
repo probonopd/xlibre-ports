@@ -1,7 +1,6 @@
 PORTNAME=	xf86-video-mga
 PORTVERSION=	2.0.0
 PORTREVISION=	5
-PORTEPOCH=	3
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	b-aazbsd@proton.me

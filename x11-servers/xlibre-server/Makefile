@@ -25,7 +25,6 @@ PORTNAME=	xephyr
 .elif  ${FLAVOR} == xorg
 PKGNAMESUFFIX=	-server
 .elif ${FLAVOR} == xnest
-PORTEPOCH=	2
 PKGNAMESUFFIX= -nestserver
 .elif ${FLAVOR} == xvfb
 PKGNAMESUFFIX=	-vfbserver
