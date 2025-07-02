@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-intel
+PORTNAME=	xlibre-xf86-video-intel
 DISTVERSION=	2.99.917-923
 PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g${GL_TAGNAME:C/(.{12}).*/\1/}

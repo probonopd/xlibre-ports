@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-dummy
+PORTNAME=	xlibre-xf86-video-dummy
 PORTVERSION=	0.3.8
 PORTREVISION=	4
 CATEGORIES=	x11-drivers

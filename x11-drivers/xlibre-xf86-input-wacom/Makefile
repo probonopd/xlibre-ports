@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-wacom
+PORTNAME=	xlibre-xf86-input-wacom
 PORTVERSION=	0.39.0
 PORTREVISION=	4
 CATEGORIES=	x11-drivers

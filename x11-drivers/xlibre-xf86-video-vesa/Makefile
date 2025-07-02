@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-vesa
+PORTNAME=	xlibre-xf86-video-vesa
 PORTVERSION=	2.5.0
 PORTREVISION=	3
 CATEGORIES=	x11-drivers

@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-mga
+PORTNAME=	xlibre-xf86-video-mga
 PORTVERSION=	2.0.0
 PORTREVISION=	5
 CATEGORIES=	x11-drivers
