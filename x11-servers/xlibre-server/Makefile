@@ -1,5 +1,5 @@
 PORTNAME=	xlibre
-PORTVERSION=	25.0.0.1
+PORTVERSION=	25.0.0.2
 CATEGORIES=	x11-servers
 
 MAINTAINER=	b-aazbsd@proton.me
@@ -14,7 +14,7 @@ FLAVOR?=	${FLAVORS:[1]}
 USE_GITHUB=	yes
 GH_ACCOUNT=	x11libre
 GH_PROJECT=	xserver
-GH_TAGNAME=	3e1c2d5
+GH_TAGNAME=	xlibre-xserver-${PORTVERSION}
 
 USES=		compiler:c11 cpe gl meson pkgconfig tar:xz xorg
 USE_GL=		gl
