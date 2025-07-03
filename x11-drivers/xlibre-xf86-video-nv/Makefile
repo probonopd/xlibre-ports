@@ -1,4 +1,4 @@
-PORTNAME=	xf86-video-nv
+PORTNAME=	xlibre-xf86-video-nv
 PORTVERSION=	2.1.22
 PORTREVISION=	1
 CATEGORIES=	x11-drivers

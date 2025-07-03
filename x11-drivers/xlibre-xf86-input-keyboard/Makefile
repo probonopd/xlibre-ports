@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-keyboard
+PORTNAME=	xlibre-xf86-input-keyboard
 PORTVERSION=	1.9.0
 PORTREVISION=	6
 CATEGORIES=	x11-drivers

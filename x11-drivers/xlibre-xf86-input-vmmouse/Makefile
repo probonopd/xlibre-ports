@@ -1,4 +1,4 @@
-PORTNAME=	xf86-input-vmmouse
+PORTNAME=	xlibre-xf86-input-vmmouse
 PORTVERSION=	13.1.0
 PORTREVISION=	7
 CATEGORIES=	x11-drivers
