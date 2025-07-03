@@ -16,7 +16,7 @@ cd /usr/ports
 build_package x11-servers/xlibre-server
 
 # Install the xlibre-server package, otherwise driver builds fail
-PKG_FILE=$(find "xlibre-server" -name '*.pkg' | head -n 1)
+PKG_FILE=$(find . -name 'xlibre-server*.pkg' | head -n 1)
 if [ -n "$PKG_FILE" ]; then
   pkg install -y "$PKG_FILE"
 fi
